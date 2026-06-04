@@ -1,19 +1,19 @@
-# 🍎 Bazgar Sangat AI - بلوچ بازگارت اے آئی
+
+---
+
+# 🍎 Bazgar Sangat AI - بزگار سنگت اے آئی
 
 <div align="center">
-
-![Bazgar Sangat AI Banner](https://via.placeholder.com/1000x300/0B3B0B/D4A017?text=Bazgar+Sangat+AI)
 
 **AI-Powered Apple Disease Detection & Smart Farming Assistant for Balochi Farmers**
 
 [![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.95+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0+-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-Lite-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/lite)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/)
 
-[![Status](https://img.shields.io/badge/Status-Active%20Development-success?style=flat-square)](https://github.com/)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
-[![Language Support](https://img.shields.io/badge/Languages-Balochi%20%7C%20English%20%7C%20Urdu-orange?style=flat-square)]()
+[![Status](https://img.shields.io/badge/Status-Under%20Development-yellow?style=flat-square)]()
+[![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 </div>
 
@@ -23,610 +23,352 @@
 
 - [Problem Statement](#-problem-statement)
 - [Solution Overview](#-solution-overview)
-- [Key Features](#-key-features)
+- [Features](#-features)
 - [Technology Stack](#-technology-stack)
-- [Architecture](#-architecture)
-- [Installation & Setup](#-installation--setup)
-- [Usage Guide](#-usage-guide)
-- [Screenshots](#-screenshots)
-- [Dataset & Training](#-dataset--training)
-- [Future Advancements](#-future-advancements)
-- [Contributing](#-contributing)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Project Structure](#-project-structure)
+- [Future Work](#-future-work)
 - [License](#-license)
-- [Contact](#-contact)
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 
-### The Challenge: Agricultural AI for Low-Resource Languages
+### Balochi: A Low-Resource Language Challenge
 
-Balochi is a **low-resource language** spoken by over **8-10 million people** primarily in Balochistan (Pakistan), Iran, and Afghanistan. Despite its rich cultural heritage spanning **5,000+ years**, Balochi faces critical challenges in the digital and AI space:
+Balochi is a **low-resource language** spoken by millions across Pakistan, Iran and Afghanistan. Key challenges include:
 
-#### Core Challenges Identified:
+| Challenge | Description |
+|-----------|-------------|
+| **Digital Underrepresentation** | Minimal NLP datasets or AI tools support Balochi |
+| **Dialectal Diversity** | Multiple dialects (Western, Eastern, Southern, Rakhshani) with variations |
+| **Literacy Barriers** | Lower literacy rates in rural areas, especially with English/Urdu |
+| **Agricultural Knowledge Gap** | No AI-Powered plant disease diagnosis tools available in Balochi |
+| **Economic Constraints** | Small-scale farmers cannot afford agricultural consultants |
 
-| Challenge | Description | Impact |
-|-----------|-------------|--------|
-| **🌐 Digital Underrepresentation** | Balochi has minimal presence in NLP datasets, translation models, or AI training data | Farmers cannot access modern agricultural technology |
-| **🗣️ Dialectal Diversity** | Multiple dialects (Western, Eastern, Southern, Rakhshani) with significant variations | Standard AI models fail to understand local terminology |
-| **📱 Literacy Barriers** | Lower literacy rates in rural areas, especially with English/Urdu scripts | UI must be intuitive and voice-enabled |
-| **🦠 Agricultural Knowledge Gap** | Limited access to plant disease diagnosis in native language | Farmers lose 30-40% of crops to undetected diseases |
-| **🔧 Technical Infrastructure** | Unreliable internet connectivity in remote Balochistan regions | Need offline-capable solutions |
-| **💰 Economic Constraints** | Small-scale farmers cannot afford expensive agricultural consultants | Affordable/free AI solution required |
+### Why This Project?
 
-### Why This Matters:
-
-> *"A Balochi farmer in Turbat or Mastung should not need to read English to save their apple orchard from scab disease."*
-
-**Real Impact:**
-- Apple orchards in Balochistan produce **300,000+ tons annually**
-- Disease-related losses cost farmers **millions of rupees each season**
-- No existing AI agricultural tool supports **Balochi language**
+> No existing AI agricultural tool supports Balochi language. Farmers in Balochistan lack access to modern disease detection technology in their native language.
 
 ---
 
-## 💡 Solution Overview
+## Solution Overview
 
-**Bazgar Sangat AI** (بازگار سنگت اے آئی) - meaning *"Farmer Companion AI"* in Balochi - bridges this gap by providing:
+**Bazgar Sangat AI** (بزگار سنگت اے آئی) - "Farmer Companion AI" in Balochi - provides:
 
-### 🎯 Core Solution Components
+### Core Components
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    BAZGAR SANGAT AI                          │
 ├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────┐ │
-│  │   Disease   │  │     RL      │  │    Balochi Voice    │ │
-│  │  Detection  │  │  Assistant  │  │    Recommendations  │ │
-│  │  (98%+ Acc) │  │  (UCB MAB)  │  │   (Audio Output)    │ │
-│  └─────────────┘  └─────────────┘  └─────────────────────┘ │
+│  ┌───────────────┐  ┌───────────────┐  ┌─────────────────┐ │
+│  │    Disease    │  │      RL       │  │    Balochi      │ │
+│  │   Detection   │  │  Assistant    │  │     Voice       │ │
+│  │  (4 Classes)  │  │  (UCB MAB)    │  │   Playback      │ │
+│  └───────────────┘  └───────────────┘  └─────────────────┘ │
 │                                                             │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │            Full Balochi UI + RTL Support            │   │
-│  │              Urdu & English Fallback                 │   │
-│  └─────────────────────────────────────────────────────┘   │
+│  ┌──────────────────────────────────────────────────────┐  │
+│  │     Full Balochi UI + RTL Support + English/Urdu     │  │
+│  └──────────────────────────────────────────────────────┘  │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### How We Solve Each Challenge:
-
-| Challenge | Our Solution |
-|-----------|--------------|
-| **Digital Underrepresentation** | Custom translation pipeline with native Balochi speakers; all UI text manually verified |
-| **Dialectal Diversity** | Multi-dialect support with contextual understanding; farmer feedback loop |
-| **Literacy Barriers** | Voice output for all diagnoses + simple visual interface |
-| **Knowledge Gap** | AI disease detection with 4 apple disease classes + RL farming assistant |
-| **Infrastructure** | Optimized TensorFlow Lite model (lightweight, fast inference) |
-| **Economic Constraints** | Completely free, open-source solution |
-
 ---
 
-## ✨ Key Features
+## Features
 
 ### 1. 🍎 Apple Disease Detection
-- **4 Disease Classes**: Blotch, Normal, Rot, Scab
-- **98%+ Accuracy** on test dataset
-- **Real-time inference** (< 2 seconds)
-- **Comprehensive treatment** recommendations
+- **4 Disease Classes**: Blotch Apple, Normal Apple, Rot Apple, Scab Apple
+- **TensorFlow Lite** model for fast inference
+- **Real-time prediction** via FastAPI backend
+- **Symptoms & Treatment** in Balochi/English/Urdu
 
 ### 2. 🤖 RL Crop Assistant
-- **Reinforcement Learning agent** using UCB1 algorithm
+- **Reinforcement Learning** using UCB1 (Upper Confidence Bound) algorithm
 - **Multi-Arm Bandit** for optimal solution selection
-- **Learns from farmer feedback** (thumbs up/down)
-- **Persistent memory** across sessions
+- **Learns from farmer feedback** (👍 Helpful / 👎 Not Helpful)
+- **Persistent memory** using browser LocalStorage
+- ε-greedy exploration (ε=0.20) | UCB constant c=1.414
 
 ### 3. 🗣️ Multilingual Support
-- **Full Balochi UI** (Right-to-Left support)
-- **Urdu & English fallback**
-- **Voice playback** of diagnoses in Balochi
-- Culturally appropriate terminology
+- **Full Balochi UI** with RTL (Right-to-Left) text rendering
+- **English** fallback
+- **Urdu** support for RL assistant responses
+- **Voice playback** of diagnoses in Balochi (audio files)
 
-### 4. 📱 Modern Web Interface
+### 4. 📱 Web Interface
 - **Responsive design** (mobile/tablet/desktop)
-- **Camera integration** (photo capture)
-- **File upload support**
-- **Batch prediction** capability
+- **Camera integration** for live photo capture
+- **File upload** support
+- **Batch prediction** endpoint available
+
+### 5. 🎨 Cultural Homepage
+- Hero slider with Balochi cultural imagery
+- Statistics counter animation
+- Testimonial carousel
+- Newsletter signup (frontend only)
 
 ---
 
 ## 🛠️ Technology Stack
 
-### Backend
-```
-┌────────────────────────────────────────────────────────┐
-│  🐍 Python 3.9+                                        │
-│  ├── FastAPI (REST API framework)                     │
-│  ├── TensorFlow Lite (Model inference)                │
-│  ├── PIL/Pillow (Image processing)                    │
-│  └── Uvicorn (ASGI server)                           │
-└────────────────────────────────────────────────────────┘
+### Backend (from your main.py)
+```yaml
+Framework: FastAPI
+Server: Uvicorn
+ML Runtime: TensorFlow Lite Interpreter
+Image Processing: PIL/Pillow
+Port: 8000
 ```
 
-### Frontend
-```
-┌────────────────────────────────────────────────────────┐
-│  🌐 HTML5 / CSS3 / JavaScript ES6+                    │
-│  ├── Lottie Animations (Cultural elements)            │
-│  ├── Font Awesome 6 (Icons)                          │
-│  ├── Google Fonts (Inter typeface)                   │
-│  └── MediaDevices API (Camera access)                 │
-└────────────────────────────────────────────────────────┘
+### Frontend (from your app.js & index.html)
+```yaml
+HTML5 / CSS3 / JavaScript ES6+
+Icons: Font Awesome 6
+Fonts: Google Fonts (Inter)
+Animations: Lottie Player (CDN)
+Camera: MediaDevices API
+Storage: LocalStorage (RL memory)
 ```
 
-### AI/ML Components
-```
-┌────────────────────────────────────────────────────────┐
-│  🧠 TensorFlow Lite Model (.tflite)                   │
-│  │   ├── Input: 224x224x3 RGB images                  │
-│  │   ├── Output: 4-class softmax probabilities        │
-│  │   └── Architecture: MobileNetV2-based              │
-│  ├── RL Agent: UCB1 Multi-Arm Bandit                  │
-│  │   ├── ε-greedy exploration (ε=0.20)                │
-│  │   ├── UCB constant c=1.414                         │
-│  │   └── LocalStorage memory persistence              │
-└────────────────────────────────────────────────────────┘
+### AI/ML Components (confirmed from your code)
+```yaml
+Model Format: TensorFlow Lite (.tflite)
+Input Shape: [1, 224, 224, 3] (RGB normalized 0-1)
+Output: 4-class softmax probabilities
+RL Algorithm: UCB1 Multi-Arm Bandit
+RL Parameters: epsilon=0.20, UCB_C=1.414
 ```
 
 ---
 
-## 🏗️ Architecture
-
-```
-                    ┌─────────────────────────────────────────┐
-                    │           Client Browser                │
-                    │  (HTML/CSS/JS - Balochi/Eng/Urdu UI)   │
-                    └─────────────────┬───────────────────────┘
-                                      │
-                    ┌─────────────────▼───────────────────────┐
-                    │         FastAPI Server (:8000)          │
-                    │  ┌─────────────────────────────────┐   │
-                    │  │  /predict (POST)                 │   │
-                    │  │  /predict-batch (POST)           │   │
-                    │  │  /health (GET)                   │   │
-                    │  └─────────────────────────────────┘   │
-                    └─────────────────┬───────────────────────┘
-                                      │
-                    ┌─────────────────▼───────────────────────┐
-                    │      TensorFlow Lite Interpreter        │
-                    │    (apple_disease_model.tflite)        │
-                    └─────────────────────────────────────────┘
-
-    ┌─────────────────────────────────────────────────────────────┐
-    │                      Data Flow                              │
-    │                                                             │
-    │  Image Upload → Preprocess (224x224, normalize) →         │
-    │  Inference → Softmax Probabilities → Class + Confidence →  │
-    │  Disease Data → Symptoms + Treatment → Voice (Balochi)     │
-    └─────────────────────────────────────────────────────────────┘
-```
-
----
-
-## 📦 Installation & Setup
+## 📦 Installation
 
 ### Prerequisites
-
-```bash
-# System Requirements
-- Python 3.9 or higher
+- Python 3.9+
 - pip package manager
-- Virtual environment (recommended)
-- 4GB RAM minimum
-- 500MB free disk space
-```
 
 ### Step 1: Clone Repository
-
 ```bash
-git clone https://github.com/yourusername/bazgar-sangat-ai.git
-cd bazgar-sangat-ai
+git clone https://github.com/precious-05/Bazgar_AI.git
+cd Bazgar_AI
 ```
 
-### Step 2: Create Virtual Environment
-
+### Step 2: Install Backend Dependencies
 ```bash
-# Windows
-python -m venv venv
-venv\Scripts\activate
-
-# macOS/Linux
-python3 -m venv venv
-source venv/bin/activate
+pip install fastapi uvicorn tensorflow pillow python-multipart numpy
 ```
 
-### Step 3: Install Dependencies
-
+Or use requirements.txt:
 ```bash
 pip install -r requirements.txt
 ```
 
-**requirements.txt:**
-```
-fastapi==0.95.0
-uvicorn==0.21.0
-tensorflow==2.13.0
-pillow==9.5.0
-python-multipart==0.0.6
-numpy==1.24.3
-```
+### Step 3: Place Model File
+Put your `apple_disease_model.tflite` in the `backend/` folder.
 
-### Step 4: Download Model
-
-Place your `apple_disease_model.tflite` file in the **backend/** directory.
-
-> **Note:** Contact the repository owner for the trained model file, or train using your own apple disease dataset.
-
-### Step 5: Run Backend Server
-
+### Step 4: Run Backend Server
 ```bash
 cd backend
 python main.py
-# or
+# OR
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-**Expected Output:**
+Expected output:
 ```
 Loading model...
 Model loaded successfully!
-Input shape: [  1 224 224   3]
-INFO:     Uvicorn running on http://0.0.0.0:8000
+Input shape: [1 224 224 3]
+Uvicorn running on http://0.0.0.0:8000
 ```
 
-### Step 6: Launch Frontend
+### Step 5: Open Frontend
+Open `index.html` in a web browser, or use Live Server.
 
-Open `index.html` in your browser, OR use Live Server:
-
-```bash
-# Using Python's built-in server
-python -m http.server 5500
-
-# Then navigate to: http://localhost:5500
-```
-
-### Step 7: Verify Installation
-
-1. Backend health check: `http://localhost:8000/health`
-2. Frontend should show: ✅ "Model ready - Upload an image"
+### Step 6: Verify API Connection
+Visit `http://localhost:8000/health` - should show model ready status.
 
 ---
 
-## 📖 Usage Guide
+## 📖 Usage
 
-### Disease Detection Flow
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    STEP-BY-STEP GUIDE                           │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  STEP 1: Navigate to "Detection" page                          │
-│          ↓                                                      │
-│  STEP 2: Upload apple leaf/fruit image                         │
-│          - Use Camera (real-time capture)                       │
-│          - Or Upload from gallery                               │
-│          ↓                                                      │
-│  STEP 3: Click "Predict / Analyze" button                      │
-│          ↓                                                      │
-│  STEP 4: View results in Balochi:                               │
-│          - Disease name                                         │
-│          - Confidence percentage                                │
-│          - Symptoms list                                        │
-│          - Treatment recommendations (with voice playback)      │
-│          ↓                                                      │
-│  STEP 5: Listen to voice recommendation (Balochi audio)        │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-### RL Crop Assistant Flow
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│              REINFORCEMENT LEARNING AGENT                       │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  1. Type farming problem in chat (Balochi/Urdu/English)        │
-│     Example: "منی گندم ءِ پتک زرد بوتگ" (My wheat leaves are yellow)│
-│                    ↓                                            │
-│  2. Agent detects problem & crop                                │
-│                    ↓                                            │
-│  3. UCB algorithm selects best solution arm                    │
-│                    ↓                                            │
-│  4. Displays solution + confidence + reasoning                  │
-│                    ↓                                            │
-│  5. Rate solution (👍 Helpful / 👎 Not Helpful)                 │
-│                    ↓                                            │
-│  6. Agent learns and updates rewards → smarter next time       │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-### Language Switching
-
-Click the **"بلوچی" / "English"** button in the navbar to toggle between:
-- **Balochi** (RTL, full native support)
-- **English** (LTR, fallback)
-
----
-
-## 📸 Screenshots
-
-> *[Add your screenshots here]*
-
-### Homepage - Balochi Cultural Theme
-![Homepage](screenshots/homepage.png)
-*Hero slider with Balochi cultural imagery and AI messaging*
-
-### Disease Detection Page
-![Detection Page](screenshots/detection.png)
-*Upload interface with camera/file options and prediction results*
-
-### Prediction Results with Voice
-![Prediction Results](screenshots/results.png)
-*Disease diagnosis with symptoms, treatment, and voice playback*
+### Disease Detection
+1. Click **"Detection"** in navigation
+2. Upload apple image (camera or file)
+3. Click **"Predict"** button
+4. View results: Disease name, confidence %, symptoms, treatment
+5. Listen to Balochi voice recommendation (if available)
 
 ### RL Crop Assistant
-![RL Assistant](screenshots/assistant.png)
-*Reinforcement learning agent with UCB algorithm and feedback system*
+1. Click **"Crop Assistant"** in navigation
+2. Type farming problem in chat (Balochi/Urdu/English)
+3. Agent provides solution based on UCB algorithm
+4. Rate the solution (👍 Helpful / 👎 Not Helpful)
+5. Agent learns and improves over time
 
-### Multilingual Support
-![Language Support](screenshots/language.png)
-*Full Balochi UI with RTL text rendering*
-
----
-
-## 📊 Dataset & Training
-
-### Data Collection Methodology
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    DATA COLLECTION PIPELINE                     │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  🌾 Source: Apple orchards in Balochistan (Turbat, Mastung,    │
-│            Quetta, Kalat regions)                              │
-│                                                                 │
-│  📸 Images: 2,500+ labeled apple images                        │
-│      ├── Blotch Apple: 600 images                              │
-│      ├── Normal Apple: 700 images                              │
-│      ├── Rot Apple: 550 images                                 │
-│      └── Scab Apple: 650 images                                │
-│                                                                 │
-│  🗣️ Translation: Native Balochi speakers from 4 dialects       │
-│      ├── Western Balochi (Iran border region)                  │
-│      ├── Eastern Balochi (Sibi, Naseerabad)                    │
-│      ├── Southern Balochi (Turbat, Gwadar)                     │
-│      └── Rakhshani (Kharan, Washuk)                            │
-│                                                                 │
-│  📝 Treatment Data: Verified by agricultural experts           │
-│                                                                 │
-│  ✅ Validation: Cross-checked by 10+ Balochi farmers           │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-### Model Training
-
-| Parameter | Value |
-|-----------|-------|
-| Base Model | MobileNetV2 (transfer learning) |
-| Input Size | 224×224×3 |
-| Epochs | 50 |
-| Batch Size | 32 |
-| Optimizer | Adam (lr=0.001) |
-| Loss Function | Categorical Crossentropy |
-| Validation Split | 20% |
-| Final Accuracy | 94% (target: >98% with more data) |
-
----
-
-## 🚀 Future Advancements
-
-### Currently Under Development
-
-| Feature | Status | Expected Release |
-|---------|--------|------------------|
-| 🎤 **Speech-to-Text Input** | In Progress | Q2 2025 |
-| 🔍 **More Disease Classes** | Planned (8 new classes) | Q3 2025 |
-| 📱 **Mobile App (React Native)** | Planned | Q4 2025 |
-| 🌍 **Offline Mode (PWA)** | In Research | Q4 2025 |
-| 📊 **Crop Price Prediction** | Planned | Q1 2026 |
-| 🤝 **Farmer Community Forum** | Planned | Q2 2026 |
-
-### Planned Enhancements
-
-```yaml
-Voice Features:
-  - Speech recognition for Balochi dialects
-  - Text-to-speech for all diagnoses
-  - Voice-based navigation
-
-Model Improvements:
-  - Expand to 12 apple disease classes
-  - Add support for grapes, pomegranates, dates
-  - Ensemble learning for higher accuracy
-
-Deployment:
-  - Docker containerization
-  - Cloud deployment (AWS/GCP/Azure)
-  - Edge deployment for offline use
-
-Data Expansion:
-  - Crowdsource images from farmers
-  - Automated data augmentation pipeline
-  - Active learning for model improvement
-```
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! See our [Contributing Guidelines](CONTRIBUTING.md).
-
-### Ways to Contribute
-
-- 🐛 **Report bugs** via GitHub Issues
-- 🌍 **Add Balochi dialect translations**
-- 📸 **Submit apple disease images** (unlabeled or labeled)
-- 💻 **Improve code** (frontend/backend)
-- 📚 **Documentation improvements**
-- 🎨 **UI/UX enhancements**
-
-### Development Setup
-
-```bash
-# Fork the repository
-# Clone your fork
-git clone https://github.com/YOUR_USERNAME/bazgar-sangat-ai.git
-
-# Create feature branch
-git checkout -b feature/amazing-feature
-
-# Make changes and commit
-git commit -m 'Add amazing feature'
-
-# Push to branch
-git push origin feature/amazing-feature
-
-# Open Pull Request
-```
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-```
-MIT License
-
-Copyright (c) 2025 Bazgar Sangat AI
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files...
-```
-
----
-
-## 📞 Contact & Support
-
-### Project Maintainer
-
-- **Name**: [Your Name]
-- **Email**: [your.email@example.com]
-- **GitHub**: [@yourusername](https://github.com/yourusername)
-
-### Community
-
-- **Discord Server**: [Join for discussions](https://discord.gg/invite-link)
-- **WhatsApp Group**: Balochi Farmers Network
-
-### Citation
-
-If you use this project in your research, please cite:
-
-```bibtex
-@software{bazgar_sangat_ai_2025,
-  author = {[Your Name]},
-  title = {Bazgar Sangat AI: Balochi Language Apple Disease Detection},
-  year = {2025},
-  url = {https://github.com/yourusername/bazgar-sangat-ai}
-}
-```
-
----
-
-## 🙏 Acknowledgments
-
-- **Balochi Farmers** of Turbat, Mastung, and Quetta for data contribution
-- **Agricultural Experts** who verified treatment protocols
-- **Native Balochi Translators** from all major dialects
-- **Open Source Community** for amazing tools and libraries
-
----
-
-<div align="center">
-
-**Made with ❤️ for Balochi Farmers**
-
-*"Technology should speak your language"*
-
-[⭐ Star this repo on GitHub](https://github.com/yourusername/bazgar-sangat-ai) | [🐛 Report Bug](https://github.com/yourusername/bazgar-sangat-ai/issues) | [💡 Request Feature](https://github.com/yourusername/bazgar-sangat-ai/issues)
-
-</div>
+### Language Switching
+Click the **language toggle button** in navbar to switch between:
+- **بلوچی** (Balochi - RTL)
+- **English** (LTR)
 
 ---
 
 ## 📁 Project Structure
 
 ```
-bazgar-sangat-ai/
+Bazgar_AI/
 │
 ├── backend/
 │   ├── main.py                    # FastAPI server
-│   ├── apple_disease_model.tflite # Trained model
+│   ├── apple_disease_model.tflite # Trained model (required)
 │   └── requirements.txt           # Python dependencies
 │
 ├── frontend/
-│   ├── index.html                 # Main HTML
-│   ├── app.js                     # Frontend logic
-│   ├── style.css                  # Styles (Balochi theme)
+│   ├── index.html                 # Main HTML file
+│   ├── app.js                     # Frontend JavaScript
+│   ├── style.css                  # Styles (Balochi theme + RTL)
 │   │
-│   ├── audio/                     # Voice files
-│   │   ├── d0.wav                 # Blotch Apple
-│   │   ├── d1.wav                 # Normal Apple
-│   │   ├── d2.wav                 # Rot Apple
-│   │   └── d3.wav                 # Scab Apple
+│   ├── audio/                     # Voice files (d0.wav, d1.wav, d2.wav, d3.wav)
 │   │
-│   └── images/                    # UI images
-│       ├── b1.png, b3.png, etc.   # Slider images
+│   └── images/                    # UI images (b1.png, b3.png, b5.png, etc.)
 │
-├── screenshots/                   # README screenshots
-│
-├── README.md                      # This file
-├── LICENSE                        # MIT License
-└── CONTRIBUTING.md                # Contribution guide
+├── README.md
+└── LICENSE                        # GPL v3.0
 ```
 
 ---
 
-## 🧪 Testing
+## 🔧 API Endpoints
 
-### Backend API Testing
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/` | GET | API root, returns status message |
+| `/health` | GET | Health check, returns model loaded status |
+| `/predict` | POST | Single image prediction |
+| `/predict-batch` | POST | Multiple images prediction |
 
+### Predict Request Example
 ```bash
-# Health check
-curl http://localhost:8000/health
-
-# Prediction test
 curl -X POST http://localhost:8000/predict \
-  -F "file=@test_image.jpg"
+  -F "file=@apple_image.jpg"
 ```
 
-### Frontend Testing
-
-```bash
-# Run tests (if implemented)
-npm test
-# or
-python -m pytest tests/
+### Predict Response Example
+```json
+{
+  "success": true,
+  "prediction": {
+    "class_index": 2,
+    "class_name": "Rot Apple",
+    "confidence": 87.45,
+    "all_probabilities": {
+      "Blotch Apple": 5.23,
+      "Normal Apple": 2.11,
+      "Rot Apple": 87.45,
+      "Scab Apple": 5.21
+    }
+  }
+}
 ```
 
 ---
 
-## 📊 Performance Metrics
+## 🗣️ Balochi Language Implementation
 
-| Metric | Value |
-|--------|-------|
-| **Model Inference Time** | < 2 seconds |
-| **API Response Time** | < 500ms (excluding inference) |
-| **Frontend Load Time** | < 3 seconds (first load) |
-| **Mobile Responsiveness** | 100% (tested on 10+ devices) |
-| **Balochi Translation Coverage** | 100% (UI + Disease Data) |
-| **RL Learning Rate** | 0.999 decay per 100 attempts |
+From your code, Balochi is implemented as:
+
+### Translation Object (app.js)
+- Complete UI translations for **Balochi** and **English**
+- Partial Urdu support for RL assistant
+- RTL CSS class (`body.rtl`) for proper text direction
+
+### Disease Data (app.js)
+- Symptoms and treatment in **Balochi** and **English**
+- 4 disease classes fully translated
+
+### Voice Feature
+- Audio files: `d0.wav`, `d1.wav`, `d2.wav`, `d3.wav`
+- Plays automatically after prediction when language is Balochi
 
 ---
 
-**Bazgar Sangat AI** - *Empowering Balochi farmers through accessible artificial intelligence.* 🍎🤖
+## 🚀 Future Work
+
+Based on your code comments and structure:
+
+| Feature | Status |
+|---------|--------|
+| Translator Page | Coming Soon (placeholder) |
+| Chatbot Page | Coming Soon (placeholder) |
+| Data Hub Page | Coming Soon (placeholder) |
+| Speech-to-Text Input | Not yet implemented |
+| More Disease Classes | Can be extended |
+| Offline PWA Mode | Not yet implemented |
+
+### Currently Working On
+- Voice recognition for Balochi dialects
+- Expanding disease dataset
+- Mobile app version
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open Pull Request
+
+### Contribution Areas
+- Add more Balochi dialect translations
+- Submit apple disease images
+- Improve RL assistant knowledge base
+- Bug fixes and UI enhancements
+
+---
+
+## 📄 License
+
+```
+Bazgar Sangat AI - Apple Disease Detection for Balochi Farmers
+Copyright (C) 2025 precious-05
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+```
+
+**License**: GNU General Public License v3.0  
+**Repository**: https://github.com/precious-05/Bazgar_AI
+
+---
+
+## 📞 Contact
+
+**Developer**: precious-05  
+**GitHub**: https://github.com/precious-05
+
+---
+
+<div align="center">
+
+**Made for Balochi Farmers** 🇵🇰
+
+*"Technology should speak your language"*
+
+</div>
+
+---
+
