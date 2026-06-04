@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>بزگر سنگت اے آئی - Privacy Policy</title>
+    
+    <!-- External CSS & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8faf5 0%, #eef4e8 100%);
+            min-height: 100vh;
+            color: #1a4f1a;
+            line-height: 1.6;
+        }
+        
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(135deg, #0b3b2d 0%, #3a6b1a 100%);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(2px);
+        }
+        
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0.9rem 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #D4A017, #F5B81B);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(212,160,23,0.4);
+        }
+        
+        .logo-icon i {
+            font-size: 26px;
+            color: #0B3B0B;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: -0.5px;
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        .ai-highlight {
+            background: linear-gradient(135deg, #D4A017, #F5B81B);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            padding: 0 4px;
+        }
+        
+        .logo-sub {
+            font-size: 0.7rem;
+            color: #c8e6c9;
+            display: block;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Main Content */
+        .main-content {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 24px;
+        }
+        
+        .privacy-card {
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.12);
+            overflow: hidden;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card-header {
+            background: linear-gradient(120deg, #fef7e0, #e8f5e9);
+            padding: 32px 40px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            border-bottom: 3px solid #D4A017;
+        }
+        
+        .header-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #D4A017, #F5B81B);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(212,160,23,0.3);
+        }
+        
+        .header-icon i {
+            font-size: 36px;
+            color: #0B3B0B;
+        }
+        
+        .header-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a4f1a;
+            margin: 0;
+        }
+        
+        .header-text p {
+            color: #5a6e5a;
+            margin: 8px 0 0;
+            font-size: 0.9rem;
+        }
+        
+        .privacy-content {
+            padding: 40px;
+        }
+        
+        .last-updated {
+            background: #fff8e7;
+            padding: 12px 20px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            font-size: 0.85rem;
+            color: #b8860b;
+            border-left: 3px solid #D4A017;
+        }
+        
+        .last-updated i {
+            color: #D4A017;
+        }
+        
+        .section {
+            margin-bottom: 32px;
+        }
+        
+        .section h3 {
+            font-size: 1.4rem;
+            color: #0B3B0B;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(212,160,23,0.3);
+        }
+        
+        .section h3 i {
+            color: #D4A017;
+            font-size: 1.3rem;
+        }
+        
+        .section p {
+            color: #2c3e2c;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        .section ul {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .section ul li {
+            margin-bottom: 8px;
+            color: #2c3e2c;
+        }
+        
+        .section ul li i {
+            color: #D4A017;
+            margin-right: 10px;
+            font-size: 0.8rem;
+        }
+        
+        .info-box {
+            background: #f0f7ed;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #D4A017;
+        }
+        
+        .info-box i {
+            color: #D4A017;
+            margin-right: 10px;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #0B3B0B 0%, #1A6B1A 100%);
+            color: #d4ebd4;
+            padding: 28px 24px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        
+        .footer-brand i {
+            font-size: 28px;
+            color: #D4A017;
+        }
+        
+        .footer-brand span {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .footer-copy {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            margin-top: 12px;
+        }
+        
+        /* RTL Support */
+        body.rtl {
+            direction: rtl;
+            text-align: right;
+        }
+        
+        body.rtl .section ul {
+            margin-right: 24px;
+            margin-left: 0;
+        }
+        
+        body.rtl .info-box {
+            border-left: none;
+            border-right: 4px solid #D4A017;
+        }
+        
+        @media (max-width: 768px) {
+            .card-header {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px;
+            }
+            
+            .privacy-content {
+                padding: 24px;
+            }
+            
+            .section h3 {
+                font-size: 1.2rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-tree"></i>
+            </div>
+            <div class="logo-text">
+                <h1>بزگر سنگت <span class="ai-highlight">AI</span></h1>
+                <span class="logo-sub">بلوچ بازگارانی اولی اے آئی</span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+    <div class="privacy-card">
+        <div class="card-header">
+            <div class="header-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="header-text">
+                <h2>Privacy Policy</h2>
+                <p>بزگر سنگت اے آئی - Bazgar Sangat AI</p>
+            </div>
+        </div>
+        
+        <div class="privacy-content">
+            <div class="last-updated">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Last Updated: June 2025</span>
+            </div>
+            
+            <div class="section">
+                <h3><i class="fas fa-info-circle"></i> Information Collection</h3>
+                <p>Bazgar Sangat AI does not collect any personal information from its users. The application does not require account creation, login, or any form of user registration.</p>
+            </div>
+            
+            <div class="section">
+                <h3><i class="fas fa-camera"></i> Camera Access</h3>
+                <p>The application requests camera access solely for the purpose of capturing images of apple leaves or fruits for disease detection. This access is:</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Used only when you explicitly use the camera feature</li>
+                    <li><i class="fas fa-check-circle"></i> Never used for any other purpose</li>
+                    <li><i class="fas fa-check-circle"></i> Not stored on any server after processing</li>
+                    <li><i class="fas fa-check-circle"></i> Not shared with any third party</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3><i class="fas fa-database"></i> Data Storage</h3>
+                <p>Images uploaded for disease detection are processed in real-time by the AI model and are not permanently stored on any server. The only data stored is:</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> RL (Reinforcement Learning) agent memory stored locally in your browser's LocalStorage</li>
+                    <li><i class="fas fa-check-circle"></i> This data never leaves your device</li>
+                    <li><i class="fas fa-check-circle"></i> You can clear this data at any time using the "Reset Memory" button in the Crop Assistant</li>
+                </ul>
+            </div>
+            
+            <div class="info-box">
+                <i class="fas fa-shield-virus"></i>
+                <strong>Important:</strong> All image processing happens locally through your browser and our backend API. No images are saved, archived, or used for training without your explicit consent.
+            </div>
+            
+            <div class="section">
+                <h3><i class="fas fa-chart-line"></i> Analytics & Tracking</h3>
+                <p>Bazgar Sangat AI does not use any analytics tools, tracking cookies, or third-party tracking services. We do not monitor user behavior or collect usage statistics.</p>
+            </div>
+            
+            <div class="section">
+                <h3><i class="fas fa-envelope"></i> Newsletter Signup</h3>
+                <p>If you choose to sign up for our newsletter, your email address is collected but:</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Is only used to send you agricultural information</li>
+                    <li><i class="fas fa-check-circle"></i> Is never sold or shared with third parties</li>
+                    <li><i class="fas fa-check-circle"></i> You can unsubscribe at any time</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3><i class="fas fa-users"></i> Third-Party Services</h3>
+                <p>Bazgar Sangat AI does not share any user data with third-party services. All processing is done internally through our own backend infrastructure.</p>
+            </div>
+            
+            <div class="section">
+                <h3><i class="fas fa-gavel"></i> Legal Compliance</h3>
+                <p>We comply with applicable privacy laws and regulations. Since we collect no personal data, there is minimal risk to user privacy.</p>
+            </div>
+            
+            <div class="section">
+                <h3><i class="fas fa-child"></i> Children's Privacy</h3>
+                <p>Bazgar Sangat AI is not directed at children under 13. We do not knowingly collect any information from children.</p>
+            </div>
+            
+            <div class="section">
+                <h3><i class="fas fa-envelope-open-text"></i> Contact Us</h3>
+                <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+                <p><i class="fas fa-envelope"></i> Email: alina.insights@gmail.com</p>
+                <p><i class="fab fa-github"></i> GitHub: https://github.com/precious-05</p>
+            </div>
+            
+            <div class="section">
+                <h3><i class="fas fa-sync-alt"></i> Changes to This Policy</h3>
+                <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <i class="fas fa-tree"></i>
+            <span>بزگر سنگت اے آئی - Bazgar Sangat AI</span>
+        </div>
+        <div class="footer-copy">
+            <i class="far fa-copyright"></i> 2025 Bazgar Sangat AI — Protecting your privacy, protecting our forests
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
