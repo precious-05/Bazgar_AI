@@ -1,7 +1,7 @@
 
 ---
 
-# 🍎 Bazgar Sangat AI - بزگار سنگت اے آئی
+# 🍎 Bazgar Sangat AI - بزگر سنگت اے آئی
 
 <div align="center">
 
