@@ -9,7 +9,7 @@
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-Lite-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/lite)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/)
 
-[![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat-square)]()
+[![Status](https://img.shields.io/badge/Status-Under%20Development-yellow?style=flat-square)]()
 [![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Course](https://img.shields.io/badge/Course-Artificial%20Intelligence-FF5722?style=flat-square)]()
 
@@ -18,6 +18,8 @@
 ---
 
 بزگر سنگت اے آئی (Bazgar Sangat AI) is a state-of-the-art, full-stack web application developed as a **course project for the Artificial Intelligence course**. It is designed to detect apple diseases using custom Machine Learning models and provide intelligent crop management advice. By combining a high-performance **FastAPI (Python)** backend running a specialized **TensorFlow Lite** model with a dynamic, multilingual **HTML/CSS/JavaScript frontend** featuring a Balochi cultural theme and RTL support, Bazgar Sangat AI empowers farmers in Balochi-speaking regions to scan apple leaves, identify diseases, analyze confidence metrics, get treatments in their native language, and receive AI-generated farming recommendations.
+
+> **Note:** This project is currently **under active development**. New features and improvements are being added regularly.
 
 ---
 
@@ -261,11 +263,18 @@ Bazgar_AI/
 
 ## Future Enhancements
 
-- **Push Notification Alerts:** Notify farmers of seasonal disease risks.
-- **Expanded Disease Dataset:** Add more apple diseases and support for other fruit crops (grapes, pomegranates, dates).
-- **Mobile App Version:** Convert to React Native or Flutter for better offline support.
-- **On-Device Offline Inference:** Embed TensorFlow Lite model directly into a mobile app for full offline functionality.
-- **Speech-to-Text Input:** Allow farmers to ask questions via voice in Balochi.
+> **Currently Under Development** 🚧
+
+- **Speech-to-Text Input:** Allow farmers to ask questions via voice in Balochi
+- **Voice Recognition for Balochi dialects:** Enable voice-based navigation and queries
+- **Expanded Disease Dataset:** Add more apple diseases (currently 4 classes, targeting 12+ classes)
+- **Multi-Crop Support:** Extend to grapes, pomegranates, and dates
+- **Push Notification Alerts:** Notify farmers of seasonal disease risks
+- **Mobile App Version:** Convert to React Native or Flutter for better offline support
+- **On-Device Offline Inference:** Embed TensorFlow Lite model directly into mobile app
+- **Translator Page:** Complete the multilingual translation feature
+- **Chatbot Page:** Implement AI-powered farming chatbot
+- **Data Hub Page:** Advanced analytics and reporting dashboard
 
 ---
 
@@ -288,7 +297,7 @@ Bazgar_AI/
 **بزگر سنگت اے آئی - Bazgar Sangat AI**  
 *Empowering Balochi farmers through accessible artificial intelligence* 🇵🇰
 
-*This project was submitted in partial fulfillment of the requirements for the Artificial Intelligence course.*
+*This project was submitted in partial fulfillment of the requirements for the Artificial Intelligence course.*  
+*🚧 Currently under active development - new features coming soon*
 
 </div>
-
