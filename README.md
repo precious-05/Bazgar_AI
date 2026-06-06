@@ -255,7 +255,7 @@ Bazgar_AI/
 
 بزگر سنگت اے آئی values user privacy. The web application accesses device camera only for live image capture. No images or personal data are stored permanently on any server. All RL learning data is stored locally in your browser's LocalStorage and can be cleared at any time via the "Reset Memory" button.
 
-**View Published Privacy Policy:** [bazgar_ai_priacy.html](Bazgar_3/privacy_policy/bazgar_ai_priacy.html)
+**View Published Privacy Policy:** [bazgar_ai_privacy_policy](https://bazgar-ai-privacy-police.netlify.app/)
 
 **No personal datasets are shared with any third-party servers.**
 
@@ -283,6 +283,7 @@ Bazgar_AI/
 | | |
 |:---|:---|
 | **Developer Name** | Alina Liaquat |
+| **Supervisor Name** | Faisal Hafeez |
 | **GitHub** | [@precious-05](https://github.com/precious-05) |
 | **Email** | [alina.insights@gmail.com](mailto:alina.insights@gmail.com) |
 | **Class & Semester** | BS Computer Science - 6th Semester |
