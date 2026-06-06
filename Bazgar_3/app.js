@@ -1,6 +1,7 @@
 // ============================================
 // BAZGAR SANGAT AI - Complete Application
 // Apple Disease Detection + RL Crop Assistant + Voice Feature
+// URDU REMOVED - ONLY BALOCHI & ENGLISH
 // ============================================
 
 // ============================================
@@ -25,7 +26,7 @@ let loadingState, resultSection, resultContent, infoPlaceholder;
 let voicePlayer, voiceAudio, stopVoiceBtn, voiceStatus;
 
 // ============================================
-// TRANSLATIONS (UPDATED WITH HOMEPAGE)
+// TRANSLATIONS (ONLY BALOCHI & ENGLISH)
 // ============================================
 const translations = {
     balochi: {
@@ -39,7 +40,7 @@ const translations = {
         comingSoon: 'عنقریب', footer: 'بلوچ کشتکارانی واستہ جوڑ کرتگ',
         confidence: 'اعتبار', recommendation: 'توصیہ', apiError: 'API connection failed. Make sure backend is running on port 8000',
         // Homepage translations
-        heroTitle1: 'بازگار سنگت AI', heroTagline1: 'جدیدیں کِشاریت، بلوچی دود ءُ ربیدگ',
+        heroTitle1: 'بازگر سنگت AI', heroTagline1: 'جدیدیں کِشاریت، بلوچی دود ءُ ربیدگ',
         heroBtn1Text: 'پجاری ءَ بنگیج کن', heroTitle2: 'دستکاری ءُ ٹیکنالوجی',
         heroTagline2: 'پنج ہزار سالہ بلوچی دود، جدید اے آئی گوں یکجاہ',
         heroBtn2Text: 'گیشتر زان', heroTitle3: 'سوب ءِ باغ بچگ',
@@ -115,7 +116,7 @@ const translations = {
 };
 
 // ============================================
-// DISEASE DATA (SAME AS BEFORE)
+// DISEASE DATA (ONLY BALOCHI & ENGLISH - NO URDU)
 // ============================================
 const diseases = {
     balochi: {
@@ -141,7 +142,7 @@ const diseases = {
 };
 
 // ============================================
-// VOICE FUNCTIONS (SAME)
+// VOICE FUNCTIONS
 // ============================================
 function stopVoice() {
     if (currentAudio) {
@@ -203,81 +204,81 @@ function playVoice(diseaseIndex) {
 }
 
 // ============================================
-// RL AGENT - KNOWLEDGE BASE (SAME)
+// RL AGENT - KNOWLEDGE BASE (NO URDU - ONLY BALOCHI & ENGLISH)
 // ============================================
 const problemSolutions = {
     "yellow_leaves_wheat": {
         arms: [
-            { id: 0, text_en: "Nitrogen deficiency. Apply 2kg Urea per acre.", text_ur: "نائیٹروجن کی کمی ہے۔ 2 کلو یوریا فی ایکڑ ڈالیں۔", text_bal: "نائیٹروجنءِ کمی انت۔ 2 کلو یوریا فی ایکڑ بدے۔" },
-            { id: 1, text_en: "Water stress. Irrigate immediately.", text_ur: "پانی کی کمی ہے۔ فوری پانی دیں۔", text_bal: "آپءِ کمی انت۔ فوری آپ دے۔" },
-            { id: 2, text_en: "Zinc deficiency. Apply zinc sulfate.", text_ur: "زنک کی کمی ہے۔ زنک سلفیٹ ڈالیں۔", text_bal: "زنکءِ کمی انت۔ زنک سلفیٹ بدے۔" }
+            { id: 0, text_en: "Nitrogen deficiency. Apply 2kg Urea per acre.", text_bal: "نائیٹروجنءِ کمی انت۔ 2 کلو یوریا فی ایکڑ بدے۔" },
+            { id: 1, text_en: "Water stress. Irrigate immediately.", text_bal: "آپءِ کمی انت۔ فوری آپ دے۔" },
+            { id: 2, text_en: "Zinc deficiency. Apply zinc sulfate.", text_bal: "زنکءِ کمی انت۔ زنک سلفیٹ بدے۔" }
         ]
     },
     "yellow_leaves_tomato": {
         arms: [
-            { id: 0, text_en: "Heat stress. Provide shade and water.", text_ur: "گرمی کا دباؤ۔ سایہ اور پانی دیں۔", text_bal: "گَرمیءِ دباؤ۔ سایہ ءُ آپ دے۔" },
-            { id: 1, text_en: "Nitrogen deficiency. Apply balanced fertilizer.", text_ur: "نائیٹروجن کی کمی۔ متوازن کھاد ڈالیں۔", text_bal: "نائیٹروجنءِ کمی۔ متوازن کود بدے۔" },
-            { id: 2, text_en: "Early blight. Apply fungicide.", text_ur: "ابتدائی جھلساؤ۔ فنگسائڈ لگائیں۔", text_bal: "اولی بلیگ۔ فنگسائڈ کارمرز کن۔" }
+            { id: 0, text_en: "Heat stress. Provide shade and water.", text_bal: "گَرمیءِ دباؤ۔ سایہ ءُ آپ دے۔" },
+            { id: 1, text_en: "Nitrogen deficiency. Apply balanced fertilizer.", text_bal: "نائیٹروجنءِ کمی۔ متوازن کود بدے۔" },
+            { id: 2, text_en: "Early blight. Apply fungicide.", text_bal: "اولی بلیگ۔ فنگسائڈ کارمرز کن۔" }
         ]
     },
     "pest_insect_general": {
         arms: [
-            { id: 0, text_en: "Spray recommended pesticide on crop.", text_ur: "فصل پر تجویز کردہ کیڑے مار دوا چھڑکیں۔", text_bal: "فصلءِ سرا دارو پاش دے۔" },
-            { id: 1, text_en: "Use neem oil spray (organic).", text_ur: "نیم کے تیل کا سپرے کریں (قدرتی)", text_bal: "نیمءِ تیلءِ اسپرے کن (طبعی)" },
-            { id: 2, text_en: "Release beneficial insects like ladybugs.", text_ur: "فائدہ مند کیڑے چھوڑیں", text_bal: "فائدگیں حشره چار کن" }
+            { id: 0, text_en: "Spray recommended pesticide on crop.", text_bal: "فصلءِ سرا دارو پاش دے۔" },
+            { id: 1, text_en: "Use neem oil spray (organic).", text_bal: "نیمءِ تیلءِ اسپرے کن (طبعی)" },
+            { id: 2, text_en: "Release beneficial insects like ladybugs.", text_bal: "فائدگیں حشره چار کن" }
         ]
     },
     "pest_insect_cotton": {
         arms: [
-            { id: 0, text_en: "Spray oil and soap solution for whitefly.", text_ur: "سفید مکھی کے لیے تیل اور صابن کا حل", text_bal: "سپیت بگک واسطہ تیل و سابون" },
-            { id: 1, text_en: "Use chemical pesticide as last resort.", text_ur: "آخری حربہ کیمیائی دوا", text_bal: "آخری داو کیمیائی دارو" }
+            { id: 0, text_en: "Spray oil and soap solution for whitefly.", text_bal: "سپیت بگک واسطہ تیل و سابون" },
+            { id: 1, text_en: "Use chemical pesticide as last resort.", text_bal: "آخری داو کیمیائی دارو" }
         ]
     },
     "water_issue_drought": {
         arms: [
-            { id: 0, text_en: "Apply mulch to retain soil moisture.", text_ur: "ملچ ڈالیں نمی برقرار رکھنے", text_bal: "ملچ ایر کن" },
-            { id: 1, text_en: "Use drip irrigation to save water.", text_ur: "ٹپکا آبپاشی", text_bal: "چکو آپ کارمرز" },
-            { id: 2, text_en: "Water early morning or evening.", text_ur: "صبح یا شام کو پانی", text_bal: "سہب یا بیگاه آپ" }
+            { id: 0, text_en: "Apply mulch to retain soil moisture.", text_bal: "ملچ ایر کن" },
+            { id: 1, text_en: "Use drip irrigation to save water.", text_bal: "چکو آپ کارمرز" },
+            { id: 2, text_en: "Water early morning or evening.", text_bal: "سہب یا بیگاه آپ" }
         ]
     },
     "water_issue_flood": {
         arms: [
-            { id: 0, text_en: "Make drainage system in field.", text_ur: "کھیت میں نکاسی کا انتظام", text_bal: "کشتءَ آپءِ در کنگءِ بندوبست" },
-            { id: 1, text_en: "Plant on raised beds.", text_ur: "اونچے بستروں پر لگائیں", text_bal: "برز بستری ءَ کشّنت" }
+            { id: 0, text_en: "Make drainage system in field.", text_bal: "کشتءَ آپءِ در کنگءِ بندوبست" },
+            { id: 1, text_en: "Plant on raised beds.", text_bal: "برز بستری ءَ کشّنت" }
         ]
     },
     "fertilizer_rice": {
         arms: [
-            { id: 0, text_en: "Urea 1.5 bags per acre for rice.", text_ur: "چاول یوریا ڈیڑھ بوری فی ایکڑ", text_bal: "برنج یوریا ڈیڑھ بوری" },
-            { id: 1, text_en: "Use DAP for root development.", text_ur: "جڑوں کے لیے ڈی اے پی", text_bal: "ریشگانی واسطہ ڈی اے پی" }
+            { id: 0, text_en: "Urea 1.5 bags per acre for rice.", text_bal: "برنج یوریا ڈیڑھ بوری" },
+            { id: 1, text_en: "Use DAP for root development.", text_bal: "ریشگانی واسطہ ڈی اے پی" }
         ]
     },
     "sowing_time_wheat": {
-        arms: [{ id: 0, text_en: "Sow wheat in October for best yield.", text_ur: "گندم اکتوبر میں بوتے ہیں", text_bal: "گندم اکتوبر کشّنت" }]
+        arms: [{ id: 0, text_en: "Sow wheat in October for best yield.", text_bal: "گندم اکتوبر کشّنت" }]
     },
     "sowing_time_corn": {
-        arms: [{ id: 0, text_en: "Sow corn in March.", text_ur: "مکئی مارچ میں بوتے ہیں", text_bal: "مکی مارچ کشّنت" }]
+        arms: [{ id: 0, text_en: "Sow corn in March.", text_bal: "مکی مارچ کشّنت" }]
     },
     "sowing_time_rice": {
-        arms: [{ id: 0, text_en: "Plant rice in June.", text_ur: "چاول جون میں لگاتے ہیں", text_bal: "برنج جون کشّنت" }]
+        arms: [{ id: 0, text_en: "Plant rice in June.", text_bal: "برنج جون کشّنت" }]
     },
     "storage_wheat": {
         arms: [
-            { id: 0, text_en: "Keep wheat in dry, clean bags.", text_ur: "خشک بوریوں میں رکھیں", text_bal: "ہشک بوجیاں ایر کن" },
-            { id: 1, text_en: "Add neem leaves to protect from insects.", text_ur: "نیم کے پتے ڈالیں", text_bal: "نیم تاک ایر کن" }
+            { id: 0, text_en: "Keep wheat in dry, clean bags.", text_bal: "ہشک بوجیاں ایر کن" },
+            { id: 1, text_en: "Add neem leaves to protect from insects.", text_bal: "نیم تاک ایر کن" }
         ]
     },
     "fungus_rot_general": {
         arms: [
-            { id: 0, text_en: "Reduce watering and apply fungicide.", text_ur: "پانی کم کریں اور فنگسائڈ لگائیں", text_bal: "آپ کم کن ءُ فنگسائڈ کارمرز" },
-            { id: 1, text_en: "Remove infected plants immediately.", text_ur: "بیمار پودوں کو فوری ہٹا دیں", text_bal: "نادراہیں درچکاں فوری در کن" },
-            { id: 2, text_en: "Improve air circulation between plants.", text_ur: "پودوں کے درمیان ہوا کی گردش بہتر کریں", text_bal: "درچکانی نیامءَ هوا ءِ چرک بتر کن" }
+            { id: 0, text_en: "Reduce watering and apply fungicide.", text_bal: "آپ کم کن ءُ فنگسائڈ کارمرز" },
+            { id: 1, text_en: "Remove infected plants immediately.", text_bal: "نادراہیں درچکاں فوری در کن" },
+            { id: 2, text_en: "Improve air circulation between plants.", text_bal: "درچکانی نیامءَ هوا ءِ چرک بتر کن" }
         ]
     }
 };
 
 // ============================================
-// RL MEMORY MANAGEMENT (SAME)
+// RL MEMORY MANAGEMENT
 // ============================================
 let memory = {};
 let epsilon = 0.20;
@@ -403,14 +404,12 @@ function updateReward(problemKey, armIdx, rewardValue) {
 }
 
 // ============================================
-// RL HELPER FUNCTIONS (SAME)
+// RL HELPER FUNCTIONS (NO URDU DETECTION)
 // ============================================
 function detectLanguage(text) {
+    // Only detect Balochi (Arabic script) or English
     if (/[\u0600-\u06FF]/.test(text)) {
-        if (/(کشت|گندم|فصل|کود|تاک|مٹ|دارو|بدے|کن|آپ|بزگر|درچک)/.test(text)) {
-            return "bal";
-        }
-        return "ur";
+        return "bal";
     }
     return "en";
 }
@@ -471,7 +470,7 @@ function getSolutionText(problemKey, armIdx, lang) {
     const arm = problemSolutions[problemKey].arms[armIdx];
     if (!arm) return "Solution not found. Please try again.";
     
-    if (lang === "ur") return arm.text_ur || arm.text_en;
+    // Only Balochi and English - NO URDU
     if (lang === "bal") return arm.text_bal || arm.text_en;
     return arm.text_en;
 }
@@ -487,7 +486,7 @@ function getConfidence(problemKey, armIdx) {
 }
 
 // ============================================
-// ASSISTANT UI RENDERING (UPDATED WITH FONT-AWESOME ICONS)
+// ASSISTANT UI RENDERING
 // ============================================
 let assistantMessages = [];
 let assistantFeedbackGiven = new Map();
@@ -693,7 +692,7 @@ function manualSaveMemory() {
 }
 
 // ============================================
-// APPLE DISEASE DETECTION FUNCTIONS (SAME)
+// APPLE DISEASE DETECTION FUNCTIONS
 // ============================================
 async function checkAPI() {
     const statusDiv = document.getElementById('apiStatus');
@@ -821,7 +820,7 @@ async function handlePrediction() {
 }
 
 // ============================================
-// CAMERA FUNCTIONS (SAME)
+// CAMERA FUNCTIONS
 // ============================================
 async function startCamera() {
     try {
@@ -918,7 +917,7 @@ function clearAll() {
 }
 
 // ============================================
-// FILE UPLOAD (SAME)
+// FILE UPLOAD
 // ============================================
 function setupFileUpload() {
     if (fileUploadBtn) {
@@ -1062,7 +1061,7 @@ function updateHomepageLanguage() {
 }
 
 // ============================================
-// NAVIGATION & LANGUAGE (FIXED)
+// NAVIGATION & LANGUAGE
 // ============================================
 function updateLanguage() {
     const t = translations[currentLanguage];
@@ -1134,12 +1133,6 @@ function updateLanguage() {
     if (switchCameraText) switchCameraText.innerText = t.switchCamera;
     if (closeText) closeText.innerText = t.close;
     
-    // File name display
-    if (fileName && !fileName.innerText.includes('.') && fileName.innerText !== t.noFileChosen) {
-    } else if (fileName) {
-        fileName.innerHTML = `<i class="far fa-file-image"></i> <span>${t.noFileChosen}</span>`;
-    }
-    
     // RTL direction
     if (currentLanguage === 'balochi') {
         document.body.classList.add('rtl');
@@ -1202,7 +1195,7 @@ function setupNavigation() {
 }
 
 // ============================================
-// INITIALIZATION (SAME)
+// INITIALIZATION
 // ============================================
 async function init() {
     fileInput = document.getElementById('fileInput');

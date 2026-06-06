@@ -12,7 +12,7 @@ app = FastAPI(title="Apple Disease Detection API")
 # Enable CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, replace with your frontend URL
+    allow_origins=["*"],  # In production, I will replace with my frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -47,7 +47,7 @@ def preprocess_image(image_bytes):
     if image.mode != 'RGB':
         image = image.convert('RGB')
     
-    # Resize to 224x224 (or whatever your model expects)
+    # Resize to 224x224 (or whatevermodel expects)
     image = image.resize((224, 224))
     
     # Convert to numpy array and normalize

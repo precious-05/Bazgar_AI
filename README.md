@@ -1,7 +1,7 @@
 
 <div align="center">
 
-# بزگر سنگت اے آئی - Bazgar Sangat AI
+#> بازگر سنگت اے آئی - Bazgar Sangat AI
 > **AI-Powered Apple Disease Detection & Smart Farming Assistant for Balochi Farmers**
 
 [![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
@@ -17,7 +17,7 @@
 
 ---
 
-بزگر سنگت اے آئی (Bazgar Sangat AI) is a state-of-the-art, full-stack web application developed as a **course project for the Artificial Intelligence course**. It is designed to detect apple diseases using custom Machine Learning models and provide intelligent crop management advice. By combining a high-performance **FastAPI (Python)** backend running a specialized **TensorFlow Lite** model with a dynamic, multilingual **HTML/CSS/JavaScript frontend** featuring a Balochi cultural theme and RTL support, Bazgar Sangat AI empowers farmers in Balochi-speaking regions to scan apple leaves, identify diseases, analyze confidence metrics, get treatments in their native language, and receive AI-generated farming recommendations.
+>بازگر سنگت اے آئی (Bazgar Sangat AI) is a state-of-the-art, full-stack web application developed as a **course project for the Artificial Intelligence course**. It is designed to detect apple diseases using custom Machine Learning models and provide intelligent crop management advice. By combining a high-performance **FastAPI (Python)** backend running a specialized **TensorFlow Lite** model with a dynamic, multilingual **HTML/CSS/JavaScript frontend** featuring a Balochi cultural theme and RTL support, Bazgar Sangat AI empowers farmers in Balochi-speaking regions to scan apple leaves, identify diseases, analyze confidence metrics, get treatments in their native language, and receive AI-generated farming recommendations.
 
 > **Note:** This project is currently **under active development**. New features and improvements are being added regularly.
 
@@ -26,7 +26,7 @@
 ## Table of Contents
 - [About the App](#about-the-app)
 - [Course Context](#course-context)
-- [App Screenshots](#app-screenshots)
+- [App Demo](#app-demo)
 - [Key Features](#key-features)
 - [Technologies Used](#technologies-used)
 - [How to Run the Project](#how-to-run-the-project)
@@ -67,31 +67,15 @@ This project was developed to fulfill the **requirements of the Artificial Intel
 
 ---
 
-## App Screenshots
+## App Demo
 
-### Homepage & Multilingual UI
 
-| Homepage Hero Section | Balochi Language UI | English Language UI |
-| :---: | :---: | :---: |
-| *[Add Screenshot: homepage.png]* | *[Add Screenshot: balochi_ui.png]* | *[Add Screenshot: english_ui.png]* |
 
-### AI Disease Detection
 
-| Image Upload | Prediction Result (Balochi) | Voice Playback |
-| :---: | :---: | :---: |
-| *[Add Screenshot: upload.png]* | *[Add Screenshot: result_balochi.png]* | *[Add Screenshot: voice_player.png]* |
 
-### RL Crop Assistant
 
-| Chat Interface | Getting a Recommendation | Providing Feedback |
-| :---: | :---: | :---: |
-| *[Add Screenshot: assistant_chat.png]* | *[Add Screenshot: recommendation.png]* | *[Add Screenshot: feedback.png]* |
 
-### Cultural & Risk Features
 
-| Balochi Cultural Showcase | How It Works Section | Testimonials |
-| :---: | :---: | :---: |
-| *[Add Screenshot: cultural.png]* | *[Add Screenshot: howitworks.png]* | *[Add Screenshot: testimonials.png]* |
 
 ---
 
